@@ -1,0 +1,34 @@
+# Permanent redirects. Keep this in sync with vercel.json via src/hosting.ts.
+# Extensionless HTML and trailing slashes on real pages are canonicalized by Workers html_handling.
+/benchmarks /benchmark 308
+/benchmarks/ /benchmark 308
+/blog/launch /benchmark 308
+/blog/launch/ /benchmark 308
+/legal/privacy /privacy 308
+/legal/privacy/ /privacy 308
+/legal/privacy-policy /privacy 308
+/legal/privacy-policy/ /privacy 308
+/docs/first-session /docs/sessions 308
+/docs/first-session/ /docs/sessions 308
+/docs/sub-agents /docs/agents 308
+/docs/sub-agents/ /docs/agents 308
+/docs/web-ui /docs/workspace 308
+/docs/web-ui/ /docs/workspace 308
+/docs/server-mode /docs/workspace 308
+/docs/server-mode/ /docs/workspace 308
+/docs/cli-runtime /docs/commands 308
+/docs/cli-runtime/ /docs/commands 308
+/docs/feature-map /docs/commands 308
+/docs/feature-map/ /docs/commands 308
+/docs/codex /docs/models 308
+/docs/codex/ /docs/models 308
+/docs/credentials /docs/ace 308
+/docs/credentials/ /docs/ace 308
+/docs/connect /docs/ace 308
+/docs/connect/ /docs/ace 308
+/docs/gateway /docs/ace 308
+/docs/gateway/ /docs/ace 308
+/docs/security /docs/permissions 308
+/docs/security/ /docs/permissions 308
+/docs/sandbox /docs/permissions 308
+/docs/sandbox/ /docs/permissions 308

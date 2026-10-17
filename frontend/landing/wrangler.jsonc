@@ -1,0 +1,18 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "openscience-site",
+  // Assets-only Worker: prerendered pages, docs, and the install scripts.
+  "compatibility_date": "2026-10-17",
+  "observability": {
+    "enabled": true,
+    "logs": { "enabled": true, "head_sampling_rate": 1 },
+    "traces": { "enabled": true, "head_sampling_rate": 0.01 },
+  },
+  "assets": {
+    "directory": "./dist",
+    // /download.html and /download/ both land on /download. /docs/ lands on /docs.
+    "html_handling": "drop-trailing-slash",
+    // dist/404.html is the prerendered home page, served with status 404.
+    "not_found_handling": "404-page",
+  },
+}

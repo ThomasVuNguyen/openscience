@@ -8,6 +8,8 @@ tagged release also ships native binaries for Linux, macOS, and Windows.
 
 ## Unreleased
 
+- The public site and the workspace UI can be hosted on Cloudflare Workers. The site Worker serves prerendered pages and docs with clean URLs, trailing-slash canonicalization, legacy redirects, and the 404 page. The workspace Worker serves the workbench as a single-page app; the agent runtime stays on the machine that runs it.
+
 - Stop advertising GPT-5.4 and GPT-5.4 Mini through ChatGPT/Codex subscriptions, whose endpoint rejects those models; they remain available through OpenAI API-key connections.
 
 - Model calls now retain provider request IDs across managed, API-key, and ChatGPT subscription routes, and `openscience debug audit <session>` reports content-free call identities for visible, internal, and worker calls.

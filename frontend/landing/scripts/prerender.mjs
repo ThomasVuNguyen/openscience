@@ -4,6 +4,7 @@
 import { readFile, rm, writeFile } from "node:fs/promises"
 import { resolve } from "node:path"
 import { pathToFileURL } from "node:url"
+import { workersRedirectFile } from "../src/hosting.ts"
 
 const ssr = await import(pathToFileURL(resolve("dist-ssr/entry-server.js")).href)
 const { render, ROUTES, CANONICAL, GITHUB, INSTALL_SCRIPT, NPM, SYNTHETIC_SCIENCES, X } = ssr
@@ -141,5 +142,6 @@ ${pages.map((p) => `- [${p.title.replace(/^OpenScience \| /, "")}](${p.url}): ${
 `,
 )
 
+await writeFile(resolve("dist/_redirects"), workersRedirectFile())
 await rm(resolve("dist-ssr"), { recursive: true, force: true })
-console.log(`prerendered ${pages.length} pages and 404.html, wrote sitemap.xml and llms.txt`)
+console.log(`prerendered ${pages.length} pages and 404.html, wrote sitemap.xml, llms.txt, and _redirects`)

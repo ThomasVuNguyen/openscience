@@ -17,7 +17,17 @@
       "permanent": true
     },
     {
+      "source": "/benchmarks/",
+      "destination": "/benchmark",
+      "permanent": true
+    },
+    {
       "source": "/blog/launch",
+      "destination": "/benchmark",
+      "permanent": true
+    },
+    {
+      "source": "/blog/launch/",
       "destination": "/benchmark",
       "permanent": true
     },
@@ -27,8 +37,138 @@
       "permanent": true
     },
     {
+      "source": "/legal/privacy/",
+      "destination": "/privacy",
+      "permanent": true
+    },
+    {
       "source": "/legal/privacy-policy",
       "destination": "/privacy",
+      "permanent": true
+    },
+    {
+      "source": "/legal/privacy-policy/",
+      "destination": "/privacy",
+      "permanent": true
+    },
+    {
+      "source": "/docs/first-session",
+      "destination": "/docs/sessions",
+      "permanent": true
+    },
+    {
+      "source": "/docs/first-session/",
+      "destination": "/docs/sessions",
+      "permanent": true
+    },
+    {
+      "source": "/docs/sub-agents",
+      "destination": "/docs/agents",
+      "permanent": true
+    },
+    {
+      "source": "/docs/sub-agents/",
+      "destination": "/docs/agents",
+      "permanent": true
+    },
+    {
+      "source": "/docs/web-ui",
+      "destination": "/docs/workspace",
+      "permanent": true
+    },
+    {
+      "source": "/docs/web-ui/",
+      "destination": "/docs/workspace",
+      "permanent": true
+    },
+    {
+      "source": "/docs/server-mode",
+      "destination": "/docs/workspace",
+      "permanent": true
+    },
+    {
+      "source": "/docs/server-mode/",
+      "destination": "/docs/workspace",
+      "permanent": true
+    },
+    {
+      "source": "/docs/cli-runtime",
+      "destination": "/docs/commands",
+      "permanent": true
+    },
+    {
+      "source": "/docs/cli-runtime/",
+      "destination": "/docs/commands",
+      "permanent": true
+    },
+    {
+      "source": "/docs/feature-map",
+      "destination": "/docs/commands",
+      "permanent": true
+    },
+    {
+      "source": "/docs/feature-map/",
+      "destination": "/docs/commands",
+      "permanent": true
+    },
+    {
+      "source": "/docs/codex",
+      "destination": "/docs/models",
+      "permanent": true
+    },
+    {
+      "source": "/docs/codex/",
+      "destination": "/docs/models",
+      "permanent": true
+    },
+    {
+      "source": "/docs/credentials",
+      "destination": "/docs/ace",
+      "permanent": true
+    },
+    {
+      "source": "/docs/credentials/",
+      "destination": "/docs/ace",
+      "permanent": true
+    },
+    {
+      "source": "/docs/connect",
+      "destination": "/docs/ace",
+      "permanent": true
+    },
+    {
+      "source": "/docs/connect/",
+      "destination": "/docs/ace",
+      "permanent": true
+    },
+    {
+      "source": "/docs/gateway",
+      "destination": "/docs/ace",
+      "permanent": true
+    },
+    {
+      "source": "/docs/gateway/",
+      "destination": "/docs/ace",
+      "permanent": true
+    },
+    {
+      "source": "/docs/security",
+      "destination": "/docs/permissions",
+      "permanent": true
+    },
+    {
+      "source": "/docs/security/",
+      "destination": "/docs/permissions",
+      "permanent": true
+    },
+    {
+      "source": "/docs/sandbox",
+      "destination": "/docs/permissions",
+      "permanent": true
+    },
+    {
+      "source": "/docs/sandbox/",
+      "destination": "/docs/permissions",
       "permanent": true
     },
     {

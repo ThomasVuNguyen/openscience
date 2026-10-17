@@ -65,6 +65,6 @@ bun run --cwd frontend/docs export
 
 ## Routes and deployment
 
-The canonical URL is `/docs/#/openscience/<page>`. A section link adds `#<heading>` within that hash route. Old page names are mapped in `src/navigation.ts`, and an unknown page shows a recoverable not-found view.
+Each page is `/docs/<page>`, and a section link adds `#<heading>`. Old page names and hash URLs are mapped in `src/navigation.ts`. An unknown page shows a recoverable not-found view when the app is loaded.
 
-The Vite base is `/docs/`. The landing site's `sync:docs` build copies the documentation output beneath that path. See the landing README and repository workflows for deployment. A documentation PR does not need a separate manual production deployment.
+The Vite base is `/docs/`. The landing site build copies this output to `dist/docs` and publishes the site and the docs together on Cloudflare Workers (or the existing Vercel project). A documentation change does not have its own production deployment. See the landing README.

@@ -15,6 +15,11 @@ The dev build calls port 4096 unless `VITE_OPENSCIENCE_SERVER_PORT` (or
 embeds; `bun run setup --web` at the repo root does both. Unit tests run with
 `bun test` in this directory (happy-dom); `bun run typecheck` uses tsgo.
 
+To host the workbench on Cloudflare Workers, run `bun run deploy` from this
+directory. `wrangler.jsonc` serves the build as a single-page app. Set
+`VITE_OPENSCIENCE_SERVER_URL` for the build when the UI should call a server
+other than the one embedded with the CLI. The Worker does not run the agent.
+
 Setup, checks, and pull-request expectations are in
 [CONTRIBUTING.md](../../CONTRIBUTING.md).
 
