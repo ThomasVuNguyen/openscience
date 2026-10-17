@@ -24,6 +24,7 @@ tmp
 playground
 .worktrees
 .vercel
+.wrangler/
 /openscience.json
 /result
 .openscience/node_modules/

@@ -21,8 +21,10 @@ not subtract from the scaled workspace's 16:9 content area.
 | `/ace`      | `src/pages/Ace.tsx`      | Managed models: pricing, how it works, the roster (Table 1), FAQ        |
 | `/privacy`  | `src/pages/Privacy.tsx`  | What stays local, what leaves, traces, consent, deletion                |
 
-Routing is a path switch in `src/main.tsx`; `vercel.json` rewrites every
-path to `index.html`. Shared pieces live in `src/components/` (header,
+Routing is a path switch in `src/main.tsx`. Production builds prerender each
+page to its own HTML file. Clean URLs drop `.html` and trailing slashes.
+Legacy paths and renamed docs pages redirect permanently; `src/hosting.ts`
+is the list both hosts publish. Shared pieces live in `src/components/` (header,
 footer, FAQ, copy buttons, provider marks, the SVG workspace replica). All
 styling is `src/index.css`, scoped by `data-page` and `data-component`
 attributes.
@@ -54,5 +56,20 @@ bun run build            # builds ../docs first, then this site → dist/
 the release checksum and app identity, installs the app in Applications,
 removes the downloaded quarantine attribute, and launches the verified copy.
 
-Merges to `main` deploy automatically through the linked Vercel project. For
-a manual production deployment, run `vercel deploy --prod`.
+## Host on Cloudflare Workers
+
+The site, including the docs, is an assets-only Worker (`wrangler.jsonc`).
+From this directory:
+
+```bash
+bun install
+bun run deploy
+```
+
+`deploy` builds the site and runs `wrangler deploy`. Unknown URLs return the
+prerendered `404.html` with status 404. Attach a custom domain after deploy,
+and redirect the apex host to `www.openscience.sh` so it matches the canonical
+URLs. The Worker serves files only. It does not run the OpenScience server.
+
+The same build can still deploy through the linked Vercel project. For a
+manual Vercel production deployment, run `vercel deploy --prod`.

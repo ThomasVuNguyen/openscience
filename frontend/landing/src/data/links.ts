@@ -1,7 +1,7 @@
 /* Every external destination the site links to, in one place. */
 
 export const SITE = "https://openscience.sh"
-// The apex redirects to www (a Vercel domain setting), so canonical URLs name the final host.
+// The apex redirects to www, so canonical URLs name the final host.
 export const CANONICAL = "https://www.openscience.sh"
 export const GITHUB = "https://github.com/synthetic-sciences/OpenScience"
 export const RELEASES = `${GITHUB}/releases`

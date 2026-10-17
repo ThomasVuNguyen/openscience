@@ -1,0 +1,5 @@
+# Extensionless installers. Without a type, Workers omit Content-Type and some clients will not treat them as text.
+/install
+  Content-Type: text/plain; charset=utf-8
+/install-desktop
+  Content-Type: text/plain; charset=utf-8

@@ -4,7 +4,7 @@ import Download from "./pages/Download"
 import Landing from "./pages/Landing"
 import Privacy from "./pages/Privacy"
 
-/* Old paths (/benchmarks, /blog/launch, /legal/privacy, ...) are 308s in vercel.json. */
+/* Old paths (/benchmarks, /blog/launch, /legal/privacy, ...) are permanent redirects at the host. */
 export const ROUTES: Record<string, () => JSX.Element> = {
   "/": Landing,
   "/download": Download,
